@@ -37,7 +37,7 @@ public class FigurenPannel extends javax.swing.JPanel {
             figur.draw(g);
         }
     }
-    
+
     private void initTimer(){
         myTimer = new Timer(300, new ActionListener() {
             @Override
