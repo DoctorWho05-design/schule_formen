@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
-
 import javax.swing.Timer;
 
 public class FigurenPannel extends javax.swing.JPanel {
@@ -25,10 +24,9 @@ public class FigurenPannel extends javax.swing.JPanel {
 
         initComponents();
         initColorSet();
-        initTimer();
-        setBackground(Color.gray);
-
         initFiguren();
+        setBackground(Color.gray);
+        initTimer();
     }
 
     @Override
@@ -39,6 +37,7 @@ public class FigurenPannel extends javax.swing.JPanel {
             figur.draw(g);
         }
     }
+    
     private void initTimer(){
         myTimer = new Timer(300, new ActionListener() {
             @Override

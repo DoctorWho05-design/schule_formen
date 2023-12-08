@@ -6,6 +6,7 @@ import java.awt.Graphics;
 
 public class FigurFactory {
     
+
     // Get Figuren
     public Figur getKreis(Point position, Color color, boolean gefuellt, Point size){
         return new Kreis()
@@ -49,11 +50,11 @@ public class FigurFactory {
         private int durchmesser;
         public Kreis(){
             super("Kreis");
-            this.durchmesser = size.x;
         }
 
         @Override
         public void draw(Graphics g) {
+            this.durchmesser = size.x;
             g.setColor(color);
             if (!gefuellt) {
                 g.drawOval(position.x, position.y, durchmesser, durchmesser);
@@ -89,7 +90,6 @@ public class FigurFactory {
 
         public Dreieck() {
             super("Dreieck");
-            initializeDreieck();
         }
 
         private void initializeDreieck() {
@@ -99,6 +99,7 @@ public class FigurFactory {
 
         @Override
         public void draw(Graphics g) {
+            initializeDreieck();
             g.setColor(color);
 
             if (!gefuellt) {
