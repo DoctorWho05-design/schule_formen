@@ -39,7 +39,7 @@ public class FigurenPannel extends javax.swing.JPanel {
     }
 
     private void initTimer(){
-        myTimer = new Timer(0, new ActionListener() {
+        myTimer = new Timer(300, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 initFiguren();
