@@ -17,7 +17,6 @@ public class FigurenPannel extends javax.swing.JPanel {
     private Point pannelSize = new Point(400, 300);
     private Timer myTimer;
 
-    
     public FigurenPannel() {
         FigurenListe = new ArrayList<>();
         ColorList = new ArrayList<>();
