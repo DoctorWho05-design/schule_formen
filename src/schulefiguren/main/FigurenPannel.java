@@ -45,6 +45,7 @@ public class FigurenPannel extends javax.swing.JPanel {
                 initFiguren();
                 repaint();
                 pannelSize = new Point(getWidth(), getHeight());
+                System.out.println(FigurenListe.size());
             } 
         });
         myTimer.start();
