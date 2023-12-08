@@ -6,39 +6,25 @@ import java.awt.Graphics;
 
 public class FigurFactory {
     
-    // Abstracte Klassen
-    private abstract class Figur {
-        protected String name;
-        protected Point position;
-        protected Color color;
-        protected boolean gefuellt;
-        protected Point size;
-
-
-        public Figur(String name) {
-            this.name = name;
-        }
-
-        public void setPosition(Point position) {
-            this.position = position;
-        }
-
-        public void setColor(Color color) {
-            this.color = color;
-        }
-
-        public void setFuelle(boolean gefuellt) {
-            this.gefuellt = gefuellt;
-        }
-
-        public void setSize(Point size) {
-            this.size = size;
-        }
-
-        public abstract void draw(Graphics g);    
+    // Get Figuren
+    public Figur getKreis(Point position, Color color, boolean gefuellt, Point size){
+        return new Kreis()
+            .setPosition(position)
+            .setColor(color)
+            .setFuelle(gefuellt)
+            .setSize(size)
+            .build();
     }
 
-    // Child Klassen
+    public Figur getViereck(Point position, Color color, boolean gefuellt, Point size){
+        return new Viereck()
+            .setPosition(position)
+            .setColor(color)
+            .setFuelle(gefuellt)
+            .setSize(size)
+            .build();
+    }
+
     // Kreis Klasse
     private class Kreis extends Figur{
 
