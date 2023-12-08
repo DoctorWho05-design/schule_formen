@@ -77,4 +77,50 @@ public class FigurFactory {
             }
         }
     }
+
+    // Dreieck Klasse
+    private class Dreieck extends Figur {
+        private int[] xPoints;
+        private int[] yPoints;
+
+        public Dreieck() {
+            super("Dreieck");
+            initializeDreieck();
+        }
+
+        private void initializeDreieck() {
+            xPoints = new int[] { position.x, position.x + size.x, position.x - size.x };
+            yPoints = new int[] { position.y, position.y + size.y, position.y + size.y };
+        }
+
+        @Override
+        public void draw(Graphics g) {
+            g.setColor(color);
+
+            if (!gefuellt) {
+                g.drawPolygon(xPoints, yPoints, 3);
+            } else {
+                g.fillPolygon(xPoints, yPoints, 3);
+            }
+        }
+    }
+
+    // Oval Klasse
+    private class Oval extends Figur{
+
+        public Oval(){
+            super("Oval");
+        }
+
+        @Override
+        public void draw(Graphics g) {
+            g.setColor(color);
+            if (!gefuellt) {
+                g.drawOval(position.x, position.y, size.x, size.y);
+            } else {
+                g.fillOval(position.x, position.y, size.x, size.y);
+            }
+            
+        }
+    }
 }
