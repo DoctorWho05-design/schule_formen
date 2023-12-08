@@ -16,10 +16,12 @@ public class FigurenPannel extends javax.swing.JPanel {
     private ArrayList<Color> ColorList;
     private Point pannelSize = new Point(400, 300);
     private Timer myTimer;
+    private FigurFactory figurFactory;
 
     public FigurenPannel() {
         FigurenListe = new ArrayList<>();
         ColorList = new ArrayList<>();
+        figurFactory = new FigurFactory();
 
         initComponents();
         initColorSet();
@@ -51,10 +53,10 @@ public class FigurenPannel extends javax.swing.JPanel {
     }
 
     private void initFiguren(){
-        FigurenListe.add( new Kreis());
-        FigurenListe.add( new Viereck());
-        FigurenListe.add(new Dreieck());
-        FigurenListe.add( new Oval());
+        FigurenListe.add(figurFactory.getKreis(getRandomPosition(), getRandomColor(), getRandomFuelle(), getRandomSize()));
+        FigurenListe.add(figurFactory.getViereck(getRandomPosition(), getRandomColor(), getRandomFuelle(), getRandomSize()));
+        FigurenListe.add(figurFactory.getDreieck(getRandomPosition(), getRandomColor(), getRandomFuelle(), getRandomSize()));
+        FigurenListe.add(figurFactory.getOval(getRandomPosition(), getRandomColor(), getRandomFuelle(), getRandomSize()));
     }
 
     private Color getRandomColor(){

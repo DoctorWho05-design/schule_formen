@@ -25,6 +25,24 @@ public class FigurFactory {
             .build();
     }
 
+    public Figur getDreieck(Point position, Color color, boolean gefuellt, Point size){
+        return new Dreieck()
+            .setPosition(position)
+            .setColor(color)
+            .setFuelle(gefuellt)
+            .setSize(size)
+            .build();
+    }
+
+    public Figur getOval(Point position, Color color, boolean gefuellt, Point size){
+        return new Oval()
+            .setPosition(position)
+            .setColor(color)
+            .setFuelle(gefuellt)
+            .setSize(size)
+            .build();
+    }
+
     // Kreis Klasse
     private class Kreis extends Figur{
 
