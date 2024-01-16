@@ -6,7 +6,6 @@ import java.awt.Graphics;
 
 public class FigurFactory {
     
-
     // Get Figuren
     public Figur getKreis(Point position, Color color, boolean gefuellt, Point size){
         return new Kreis()

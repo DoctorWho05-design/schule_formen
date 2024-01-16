@@ -8,8 +8,9 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.Timer;
+import javax.swing.JPanel;
 
-public class FigurenPannel extends javax.swing.JPanel {
+public class FigurenPannel extends JPanel{
 
     private ArrayList<Figur> FigurenListe;
     private ArrayList<Color> ColorList;
